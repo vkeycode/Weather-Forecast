@@ -1,5 +1,5 @@
 const url = config.MyURL; // get openweather 
-const key = config.MyKEY ;// get API key
+const key = config.MyKEY;// get API key
 
 const setQueryKey = (e) => { // setQueryKey function press enter after delete searchBar value and get API results
     if (e.keyCode == '13'){
@@ -8,7 +8,7 @@ const setQueryKey = (e) => { // setQueryKey function press enter after delete se
     }
     //getResult(searchBar.value)
 }
-const getResult = (cityName) => { // get result city name create query
+const getResult = (cityName) => { // get result cityName create query
     let query = `${url}weather?q=${cityName}&appid=${key}&units=metric&lang=en`
 
     fetch(query)
@@ -34,5 +34,6 @@ const displayResult = (result) => {
 
 
 
+
 const searchBar = document.getElementById('search-bar');  // searchBar Select and assing in searchBar variable
-searchBar.addEventListener('keypress', setQueryKey);    // keypress eventListenerfunction
+searchBar.addEventListener('keypress', setQueryKey);    // keypress "Enter" start function setQueryKey
